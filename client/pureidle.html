@@ -3,10 +3,18 @@
 </head>
 
 <body>
-  {{loginButtons}}
-  {{> hello}}
-  {{> Profile}}
-  {{> Statistics}}
+  <table id="center">
+    <tr>
+      <td>
+        <div id="main">
+          {{loginButtons}}
+          {{#if currentUser.profile.score}}
+            <div id="statistics">Your score is: {{currentUser.profile.score}}</div>
+          {{/if}}
+        </div>
+      </td>
+    </tr>
+  </table>
 </body>
 
 
