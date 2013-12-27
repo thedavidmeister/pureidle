@@ -1,7 +1,9 @@
 Template.Profile.uname = function() {
-    return Meteor.user().name;
+  var user = Meteor.user();
+  return user && user.name ? user.name : null;
 };
 
 Template.Profile.emails = function() {
-  return Meteor.user().emails;
-}
+  var user = Meteor.user();
+  return user && user.emails ? user.emails : null;
+};
