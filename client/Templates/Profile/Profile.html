@@ -1,0 +1,25 @@
+<template name="Profile">
+  <h3>Profile</h3>
+  <table>
+    {{#if uname}}
+    <tr>
+      <td>Name:</td>
+      <td>{{uname}}</td>
+    </tr>
+    {{/if}}
+
+    {{#if emails}}
+    <tr>
+      <td>Emails:</td>
+      <td>
+        <ul>
+          {{#each emails}}
+            <li>{{this.address}}</li>
+          {{/each}}
+        </ul>
+      </td>
+    </tr>
+    {{/if}}
+
+  </table>
+</template>
